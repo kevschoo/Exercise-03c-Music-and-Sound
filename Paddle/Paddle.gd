@@ -24,7 +24,7 @@ func _ready():
 func _physics_process(_delta):
 	var target = get_viewport().get_mouse_position().x
 	target = clamp(target, 0, get_viewport().size.x)
-
+	
 	var d = abs(target - position.x)						# distance between the mouse and the paddle
 	var p = d / get_viewport().get_visible_rect().size.x	# percentage of the total viewport
 	var t = clamp(d, d, speed)							# how much to move the paddle this cycle (maximum of speed)
